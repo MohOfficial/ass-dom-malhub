@@ -14,7 +14,7 @@
     <button onclick="SplitFunc()">Click Me</button>
 
     <!-- This is where the input text should be display -->
-    <h1>Outputted Words:</h1>
+    <h1 id="sol">Outputted Words:</h1>
     <ul>
 
     </ul>
@@ -24,7 +24,7 @@
     <script>
         // This is the function that will be called once the button is clicked
         function SplitFunc() {
-            let value = prompt('Enter some sentence on statement');
+            let value = prompt('Enter some sentence on statement', 'hello');
 
             // You Solution should goes here.
 
@@ -33,6 +33,10 @@
              * @Todo loop over the splited values using for loop.
              * @Todo Output the each looped element in a list.
             */
+
+            if( value !== null){
+                document.getElementById('sol').innerHTML = ' '+ value;
+            }
         }
     </script>
 </body>
